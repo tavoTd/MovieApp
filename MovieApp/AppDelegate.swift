@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,13 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let view = LoginView()
+        IQKeyboardManager.shared.enable = true
         
         self.navigation = nil
         self.navigation = UINavigationController()
+        self.navigation?.viewControllers.removeAll()
         self.navigation?.isNavigationBarHidden = true
         
-        self.navigation?.viewControllers.removeAll()
+        let view = LoginMain.createModule(navigation: self.navigation)
+        
         self.navigation?.pushViewController(view, animated: false)
         self.navigation?.popToRootViewController(animated: false)
         

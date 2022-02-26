@@ -8,18 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		0EF11F53F3E8465708786DCB /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD404C3B0C51A21C74AE0118 /* Pods_MovieApp.framework */; };
+		AE07E69B27C9B4C80041A237 /* LoginMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E69A27C9B4C80041A237 /* LoginMain.swift */; };
+		AE07E69D27C9B4DE0041A237 /* LoginViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E69C27C9B4DE0041A237 /* LoginViewUI.swift */; };
+		AE07E69F27C9B4F40041A237 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E69E27C9B4F40041A237 /* LoginPresenter.swift */; };
+		AE07E6A127C9B50C0041A237 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E6A027C9B50C0041A237 /* LoginInteractor.swift */; };
+		AE07E6A327C9B5170041A237 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E6A227C9B5170041A237 /* LoginRouter.swift */; };
+		AE07E6A527C9B5250041A237 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E6A427C9B5250041A237 /* LoginProtocol.swift */; };
+		AE07E6A827C9CA880041A237 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E6A727C9CA880041A237 /* Bundle+Extension.swift */; };
 		AE1A210F27C9942500E91E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A210E27C9942500E91E74 /* AppDelegate.swift */; };
 		AE1A211827C9942700E91E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1A211727C9942700E91E74 /* Assets.xcassets */; };
 		AE1A211B27C9942700E91E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1A211927C9942700E91E74 /* LaunchScreen.storyboard */; };
 		AE1A212627C994FD00E91E74 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A212527C994FD00E91E74 /* LoginView.swift */; };
 		AE1A212927C996E300E91E74 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A212827C996E300E91E74 /* ColorManager.swift */; };
 		AE1A212C27C9986D00E91E74 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A212B27C9986D00E91E74 /* UIView+Extension.swift */; };
+		AE49860D27C9E6E600B4FBC6 /* HomeMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49860C27C9E6E600B4FBC6 /* HomeMain.swift */; };
+		AE49860F27C9E71900B4FBC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49860E27C9E71900B4FBC6 /* HomeView.swift */; };
+		AE49861127C9E72900B4FBC6 /* HomeViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861027C9E72900B4FBC6 /* HomeViewUI.swift */; };
+		AE49861327C9E73700B4FBC6 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861227C9E73700B4FBC6 /* HomePresenter.swift */; };
+		AE49861527C9E75600B4FBC6 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861427C9E75600B4FBC6 /* HomeInteractor.swift */; };
+		AE49861727C9E76A00B4FBC6 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861627C9E76A00B4FBC6 /* HomeRouter.swift */; };
+		AE49861927C9E78900B4FBC6 /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861827C9E78800B4FBC6 /* HomeProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C1BFECC6FE015834E5D6F15 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		A8E65793B830B6C39AB41192 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AD404C3B0C51A21C74AE0118 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE07E69A27C9B4C80041A237 /* LoginMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMain.swift; sourceTree = "<group>"; };
+		AE07E69C27C9B4DE0041A237 /* LoginViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUI.swift; sourceTree = "<group>"; };
+		AE07E69E27C9B4F40041A237 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		AE07E6A027C9B50C0041A237 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		AE07E6A227C9B5170041A237 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		AE07E6A427C9B5250041A237 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		AE07E6A727C9CA880041A237 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		AE1A210B27C9942500E91E74 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1A210E27C9942500E91E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE1A211727C9942700E91E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +49,13 @@
 		AE1A212527C994FD00E91E74 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AE1A212827C996E300E91E74 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		AE1A212B27C9986D00E91E74 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AE49860C27C9E6E600B4FBC6 /* HomeMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMain.swift; sourceTree = "<group>"; };
+		AE49860E27C9E71900B4FBC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AE49861027C9E72900B4FBC6 /* HomeViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUI.swift; sourceTree = "<group>"; };
+		AE49861227C9E73700B4FBC6 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		AE49861427C9E75600B4FBC6 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		AE49861627C9E76A00B4FBC6 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		AE49861827C9E78800B4FBC6 /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +76,6 @@
 				A8E65793B830B6C39AB41192 /* Pods-MovieApp.debug.xcconfig */,
 				5C1BFECC6FE015834E5D6F15 /* Pods-MovieApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +85,13 @@
 				AD404C3B0C51A21C74AE0118 /* Pods_MovieApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE07E6A627C9B9AF0041A237 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		AE1A210227C9942500E91E74 = {
@@ -93,7 +127,9 @@
 		AE1A212227C9946900E91E74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AE07E6A627C9B9AF0041A237 /* SideMenu */,
 				AE1A212427C994EA00E91E74 /* Login */,
+				AE49860B27C9DE2300B4FBC6 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -111,7 +147,13 @@
 		AE1A212427C994EA00E91E74 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				AE07E69A27C9B4C80041A237 /* LoginMain.swift */,
 				AE1A212527C994FD00E91E74 /* LoginView.swift */,
+				AE07E69C27C9B4DE0041A237 /* LoginViewUI.swift */,
+				AE07E69E27C9B4F40041A237 /* LoginPresenter.swift */,
+				AE07E6A027C9B50C0041A237 /* LoginInteractor.swift */,
+				AE07E6A227C9B5170041A237 /* LoginRouter.swift */,
+				AE07E6A427C9B5250041A237 /* LoginProtocol.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -120,8 +162,23 @@
 			isa = PBXGroup;
 			children = (
 				AE1A212B27C9986D00E91E74 /* UIView+Extension.swift */,
+				AE07E6A727C9CA880041A237 /* Bundle+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE49860B27C9DE2300B4FBC6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AE49860C27C9E6E600B4FBC6 /* HomeMain.swift */,
+				AE49860E27C9E71900B4FBC6 /* HomeView.swift */,
+				AE49861027C9E72900B4FBC6 /* HomeViewUI.swift */,
+				AE49861227C9E73700B4FBC6 /* HomePresenter.swift */,
+				AE49861427C9E75600B4FBC6 /* HomeInteractor.swift */,
+				AE49861627C9E76A00B4FBC6 /* HomeRouter.swift */,
+				AE49861827C9E78800B4FBC6 /* HomeProtocol.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +192,7 @@
 				AE1A210727C9942500E91E74 /* Sources */,
 				AE1A210827C9942500E91E74 /* Frameworks */,
 				AE1A210927C9942500E91E74 /* Resources */,
+				8809EBF9057B316C9CE01D90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +271,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8809EBF9057B316C9CE01D90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -222,8 +297,22 @@
 			files = (
 				AE1A212927C996E300E91E74 /* ColorManager.swift in Sources */,
 				AE1A212627C994FD00E91E74 /* LoginView.swift in Sources */,
+				AE49860F27C9E71900B4FBC6 /* HomeView.swift in Sources */,
+				AE49861527C9E75600B4FBC6 /* HomeInteractor.swift in Sources */,
+				AE49861327C9E73700B4FBC6 /* HomePresenter.swift in Sources */,
+				AE07E69F27C9B4F40041A237 /* LoginPresenter.swift in Sources */,
+				AE07E6A827C9CA880041A237 /* Bundle+Extension.swift in Sources */,
+				AE07E69D27C9B4DE0041A237 /* LoginViewUI.swift in Sources */,
+				AE49861727C9E76A00B4FBC6 /* HomeRouter.swift in Sources */,
+				AE07E6A127C9B50C0041A237 /* LoginInteractor.swift in Sources */,
+				AE49861927C9E78900B4FBC6 /* HomeProtocol.swift in Sources */,
+				AE07E6A327C9B5170041A237 /* LoginRouter.swift in Sources */,
+				AE49860D27C9E6E600B4FBC6 /* HomeMain.swift in Sources */,
 				AE1A212C27C9986D00E91E74 /* UIView+Extension.swift in Sources */,
+				AE07E6A527C9B5250041A237 /* LoginProtocol.swift in Sources */,
+				AE07E69B27C9B4C80041A237 /* LoginMain.swift in Sources */,
 				AE1A210F27C9942500E91E74 /* AppDelegate.swift in Sources */,
+				AE49861127C9E72900B4FBC6 /* HomeViewUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 020f0c3dbd741796acb63cbc2ed8ab9b57feb07c
+PODS:
+  - IQKeyboardManagerSwift (6.5.6)
+  - LGSideMenuController (3.1.2)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift (= 6.5.6)
+  - LGSideMenuController
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - LGSideMenuController
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  LGSideMenuController: 0c7b155b0dbdf14bf8b88d5ac363c5fe1584bb23
+
+PODFILE CHECKSUM: dd2a466ca89e8890f4facf6027f65b1315ba73c0
 
 COCOAPODS: 1.11.2
