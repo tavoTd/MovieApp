@@ -32,6 +32,14 @@
 		AE75BF7727CA6679005E7297 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF7627CA6679005E7297 /* TabView.swift */; };
 		AE75BF7927CA77A8005E7297 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF7827CA77A8005E7297 /* MovieViewCell.swift */; };
 		AE75BF7C27CA7F90005E7297 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF7B27CA7F90005E7297 /* MovieResponse.swift */; };
+		AE75BF7F27CABCE3005E7297 /* SideMenuMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF7E27CABCE3005E7297 /* SideMenuMain.swift */; };
+		AE75BF8127CABD04005E7297 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8027CABD04005E7297 /* SideMenuView.swift */; };
+		AE75BF8327CABD1D005E7297 /* SideMenuViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8227CABD1D005E7297 /* SideMenuViewUI.swift */; };
+		AE75BF8527CABD2A005E7297 /* SideMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8427CABD2A005E7297 /* SideMenuPresenter.swift */; };
+		AE75BF8727CABD3F005E7297 /* SideMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8627CABD3F005E7297 /* SideMenuInteractor.swift */; };
+		AE75BF8927CABD56005E7297 /* SideMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8827CABD56005E7297 /* SideMenuRouter.swift */; };
+		AE75BF8B27CABD79005E7297 /* SideMenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8A27CABD79005E7297 /* SideMenuProtocol.swift */; };
+		AE75BF8E27CAD047005E7297 /* OptionMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8D27CAD047005E7297 /* OptionMenuViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +72,14 @@
 		AE75BF7627CA6679005E7297 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		AE75BF7827CA77A8005E7297 /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		AE75BF7B27CA7F90005E7297 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		AE75BF7E27CABCE3005E7297 /* SideMenuMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuMain.swift; sourceTree = "<group>"; };
+		AE75BF8027CABD04005E7297 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		AE75BF8227CABD1D005E7297 /* SideMenuViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewUI.swift; sourceTree = "<group>"; };
+		AE75BF8427CABD2A005E7297 /* SideMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuPresenter.swift; sourceTree = "<group>"; };
+		AE75BF8627CABD3F005E7297 /* SideMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuInteractor.swift; sourceTree = "<group>"; };
+		AE75BF8827CABD56005E7297 /* SideMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRouter.swift; sourceTree = "<group>"; };
+		AE75BF8A27CABD79005E7297 /* SideMenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuProtocol.swift; sourceTree = "<group>"; };
+		AE75BF8D27CAD047005E7297 /* OptionMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMenuViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +135,7 @@
 				AE1A210E27C9942500E91E74 /* AppDelegate.swift */,
 				AE1A211C27C9942700E91E74 /* Info.plist */,
 				AE1A211927C9942700E91E74 /* LaunchScreen.storyboard */,
+				AE75BF7A27CA7F6B005E7297 /* Core */,
 				AE1A212227C9946900E91E74 /* Modules */,
 				AE1A212327C9947200E91E74 /* Utils */,
 			);
@@ -128,8 +145,8 @@
 		AE1A212227C9946900E91E74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				AE75BF7A27CA7F6B005E7297 /* Core */,
 				AE1A212427C994EA00E91E74 /* Login */,
+				AE75BF7D27CABCC7005E7297 /* SideMenu */,
 				AE49860B27C9DE2300B4FBC6 /* Home */,
 			);
 			path = Modules;
@@ -199,6 +216,29 @@
 				AE75BF7B27CA7F90005E7297 /* MovieResponse.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		AE75BF7D27CABCC7005E7297 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AE75BF8C27CAD02D005E7297 /* Cell */,
+				AE75BF7E27CABCE3005E7297 /* SideMenuMain.swift */,
+				AE75BF8027CABD04005E7297 /* SideMenuView.swift */,
+				AE75BF8227CABD1D005E7297 /* SideMenuViewUI.swift */,
+				AE75BF8427CABD2A005E7297 /* SideMenuPresenter.swift */,
+				AE75BF8627CABD3F005E7297 /* SideMenuInteractor.swift */,
+				AE75BF8827CABD56005E7297 /* SideMenuRouter.swift */,
+				AE75BF8A27CABD79005E7297 /* SideMenuProtocol.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		AE75BF8C27CAD02D005E7297 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AE75BF8D27CAD047005E7297 /* OptionMenuViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,23 +359,31 @@
 				AE75BF7C27CA7F90005E7297 /* MovieResponse.swift in Sources */,
 				AE1A212627C994FD00E91E74 /* LoginView.swift in Sources */,
 				AE49861E27C9ECCF00B4FBC6 /* NavigationView.swift in Sources */,
+				AE75BF8E27CAD047005E7297 /* OptionMenuViewCell.swift in Sources */,
+				AE75BF8527CABD2A005E7297 /* SideMenuPresenter.swift in Sources */,
 				AE49860F27C9E71900B4FBC6 /* HomeView.swift in Sources */,
 				AE49861527C9E75600B4FBC6 /* HomeInteractor.swift in Sources */,
+				AE75BF8327CABD1D005E7297 /* SideMenuViewUI.swift in Sources */,
 				AE49861327C9E73700B4FBC6 /* HomePresenter.swift in Sources */,
 				AE07E69F27C9B4F40041A237 /* LoginPresenter.swift in Sources */,
 				AE07E6A827C9CA880041A237 /* Bundle+Extension.swift in Sources */,
 				AE07E69D27C9B4DE0041A237 /* LoginViewUI.swift in Sources */,
 				AE49861727C9E76A00B4FBC6 /* HomeRouter.swift in Sources */,
 				AE75BF7727CA6679005E7297 /* TabView.swift in Sources */,
+				AE75BF8927CABD56005E7297 /* SideMenuRouter.swift in Sources */,
+				AE75BF8727CABD3F005E7297 /* SideMenuInteractor.swift in Sources */,
 				AE07E6A127C9B50C0041A237 /* LoginInteractor.swift in Sources */,
 				AE49861927C9E78900B4FBC6 /* HomeProtocol.swift in Sources */,
 				AE07E6A327C9B5170041A237 /* LoginRouter.swift in Sources */,
 				AE49860D27C9E6E600B4FBC6 /* HomeMain.swift in Sources */,
 				AE1A212C27C9986D00E91E74 /* UIView+Extension.swift in Sources */,
 				AE07E6A527C9B5250041A237 /* LoginProtocol.swift in Sources */,
+				AE75BF8B27CABD79005E7297 /* SideMenuProtocol.swift in Sources */,
+				AE75BF8127CABD04005E7297 /* SideMenuView.swift in Sources */,
 				AE07E69B27C9B4C80041A237 /* LoginMain.swift in Sources */,
 				AE1A210F27C9942500E91E74 /* AppDelegate.swift in Sources */,
 				AE49861127C9E72900B4FBC6 /* HomeViewUI.swift in Sources */,
+				AE75BF7F27CABCE3005E7297 /* SideMenuMain.swift in Sources */,
 				AE75BF7927CA77A8005E7297 /* MovieViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

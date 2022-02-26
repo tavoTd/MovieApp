@@ -5,7 +5,6 @@
 //  Created by Gustavo Tellez on 25/02/22.
 //
 
-import Foundation
 import UIKit
 
 protocol LoginViewProtocol: AnyObject{

@@ -138,6 +138,6 @@ class NavigationView: UIView {
     }
     
     @objc func openMenu(){
-        print("presiono el boton del menu")
+        NotificationCenter.default.post(name: Notification.Name("NotificationShowLeftMenu"), object: nil)
     }
 }

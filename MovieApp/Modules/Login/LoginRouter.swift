@@ -14,10 +14,6 @@ class LoginRouter{
 extension LoginRouter: LoginRouterProtocol{
     
     func navigateToHome() {
-        if let nav = navigation{
-            let view = HomeMain.createModule(navigation: nav)
-            
-            nav.pushViewController(view, animated: true)
-        }
+        NotificationCenter.default.post(name: Notification.Name("NotificationOpenHome"), object: nil)
     }
 }
