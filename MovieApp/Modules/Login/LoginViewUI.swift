@@ -107,7 +107,10 @@ class LoginViewUI: UIView {
     
     private func buildUIComponents(){
         
-        self.changeBtnLogInStatus(enable: false)
+        txtUser.text = "a"
+        txtCredential.text = "b"
+        
+        self.changeBtnLogInStatus(enable: true)
         
         stackView.addArrangedSubview(txtUser)
         stackView.addArrangedSubview(txtCredential)
@@ -159,6 +162,7 @@ class LoginViewUI: UIView {
     @objc func btnLogInPressed(){
         let usr = txtUser.text ?? ""
         let credential = txtCredential.text ?? ""
+        self.hideKeyboard()
         delegate?.notifyLogIn(usr: usr, credential: credential)
     }
     

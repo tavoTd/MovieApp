@@ -28,6 +28,10 @@
 		AE49861527C9E75600B4FBC6 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861427C9E75600B4FBC6 /* HomeInteractor.swift */; };
 		AE49861727C9E76A00B4FBC6 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861627C9E76A00B4FBC6 /* HomeRouter.swift */; };
 		AE49861927C9E78900B4FBC6 /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861827C9E78800B4FBC6 /* HomeProtocol.swift */; };
+		AE49861E27C9ECCF00B4FBC6 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861D27C9ECCF00B4FBC6 /* NavigationView.swift */; };
+		AE75BF7727CA6679005E7297 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF7627CA6679005E7297 /* TabView.swift */; };
+		AE75BF7927CA77A8005E7297 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF7827CA77A8005E7297 /* MovieViewCell.swift */; };
+		AE75BF7C27CA7F90005E7297 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF7B27CA7F90005E7297 /* MovieResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		AE49861427C9E75600B4FBC6 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		AE49861627C9E76A00B4FBC6 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		AE49861827C9E78800B4FBC6 /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		AE49861D27C9ECCF00B4FBC6 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		AE75BF7627CA6679005E7297 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		AE75BF7827CA77A8005E7297 /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
+		AE75BF7B27CA7F90005E7297 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +93,6 @@
 				AD404C3B0C51A21C74AE0118 /* Pods_MovieApp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE07E6A627C9B9AF0041A237 /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		AE1A210227C9942500E91E74 = {
@@ -127,7 +128,7 @@
 		AE1A212227C9946900E91E74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				AE07E6A627C9B9AF0041A237 /* SideMenu */,
+				AE75BF7A27CA7F6B005E7297 /* Core */,
 				AE1A212427C994EA00E91E74 /* Login */,
 				AE49860B27C9DE2300B4FBC6 /* Home */,
 			);
@@ -137,6 +138,7 @@
 		AE1A212327C9947200E91E74 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AE49861A27C9EB1800B4FBC6 /* Components */,
 				AE1A212A27C9985200E91E74 /* Extensions */,
 				AE1A211727C9942700E91E74 /* Assets.xcassets */,
 				AE1A212827C996E300E91E74 /* ColorManager.swift */,
@@ -179,6 +181,24 @@
 				AE49861827C9E78800B4FBC6 /* HomeProtocol.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		AE49861A27C9EB1800B4FBC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AE49861D27C9ECCF00B4FBC6 /* NavigationView.swift */,
+				AE75BF7627CA6679005E7297 /* TabView.swift */,
+				AE75BF7827CA77A8005E7297 /* MovieViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AE75BF7A27CA7F6B005E7297 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AE75BF7B27CA7F90005E7297 /* MovieResponse.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1A212927C996E300E91E74 /* ColorManager.swift in Sources */,
+				AE75BF7C27CA7F90005E7297 /* MovieResponse.swift in Sources */,
 				AE1A212627C994FD00E91E74 /* LoginView.swift in Sources */,
+				AE49861E27C9ECCF00B4FBC6 /* NavigationView.swift in Sources */,
 				AE49860F27C9E71900B4FBC6 /* HomeView.swift in Sources */,
 				AE49861527C9E75600B4FBC6 /* HomeInteractor.swift in Sources */,
 				AE49861327C9E73700B4FBC6 /* HomePresenter.swift in Sources */,
@@ -304,6 +326,7 @@
 				AE07E6A827C9CA880041A237 /* Bundle+Extension.swift in Sources */,
 				AE07E69D27C9B4DE0041A237 /* LoginViewUI.swift in Sources */,
 				AE49861727C9E76A00B4FBC6 /* HomeRouter.swift in Sources */,
+				AE75BF7727CA6679005E7297 /* TabView.swift in Sources */,
 				AE07E6A127C9B50C0041A237 /* LoginInteractor.swift in Sources */,
 				AE49861927C9E78900B4FBC6 /* HomeProtocol.swift in Sources */,
 				AE07E6A327C9B5170041A237 /* LoginRouter.swift in Sources */,
@@ -313,6 +336,7 @@
 				AE07E69B27C9B4C80041A237 /* LoginMain.swift in Sources */,
 				AE1A210F27C9942500E91E74 /* AppDelegate.swift in Sources */,
 				AE49861127C9E72900B4FBC6 /* HomeViewUI.swift in Sources */,
+				AE75BF7927CA77A8005E7297 /* MovieViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
