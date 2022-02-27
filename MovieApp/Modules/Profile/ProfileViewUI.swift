@@ -55,6 +55,9 @@ class ProfileViewUI: UIView {
         collectionView.collectionViewLayout = UICollectionViewFlowLayout.init()
         collectionView.delegate = self
         collectionView.dataSource = self
+        let flowLayout = UICollectionViewFlowLayout.init()
+        flowLayout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = flowLayout
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(MovieViewCell.self, forCellWithReuseIdentifier: MovieViewCell.identifier)
         return collectionView
@@ -115,8 +118,8 @@ class ProfileViewUI: UIView {
             
             movieCollection.topAnchor.constraint(equalTo: lbTitleSection.bottomAnchor, constant: 30.0),
             movieCollection.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0),
-            movieCollection.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20.0),
-            movieCollection.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            movieCollection.heightAnchor.constraint(equalToConstant: 320.0),
+            movieCollection.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20.0)
         ])
     }
 }
@@ -132,7 +135,7 @@ extension ProfileViewUI: UICollectionViewDelegate, UICollectionViewDataSource, U
         let itemsByRow : CGFloat = 2
         let availableWidth = movieCollection.frame.width - 20.0
         let width = availableWidth / itemsByRow
-        let height  = 320.0
+        let height  = movieCollection.frame.height
         
         return CGSize(width: width, height: height)
     }
