@@ -5,19 +5,11 @@
 //  Created by Gustavo Tellez on 25/02/22.
 //
 
-import Foundation
+import UIKit
 
 protocol HomeViewProtocol: AnyObject{
-    func notifyMovieSelected()
-}
-
-protocol HomePresenterProtocol: AnyObject{
-    func goToMovieDetail()
-}
-
-protocol HomeInteractorProtocol: AnyObject{
-}
-
-protocol HomeRouterProtocol: AnyObject{
-    func navigateToMoviewDetail()
+    func notifyOptionSelected(option: Int)
+    func notifyGetCategoriesList() -> [CategoryOption]
+    func notifyGetParentView() -> UIViewController
+    func notifyGetPagerView() -> UIPageViewController
 }

@@ -7,7 +7,16 @@
 
 import Foundation
 
-struct MovieResponse{
+struct MovieResponse: Codable{
+    let page: Int?
+    let totalPages: Int?
+    let totalResults: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case page      =   "page"
+        case totalPages = "total_pages"
+        case totalResults = "total_results"
+    }
 }
 
 struct MovieTest{

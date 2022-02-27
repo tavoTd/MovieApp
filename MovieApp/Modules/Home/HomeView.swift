@@ -9,8 +9,12 @@ import UIKit
 
 class HomeView: UIViewController {
     
+    private lazy var homePager: HomePager = {
+        let pager = HomePager(navigation: self.navigationController!)
+        return pager
+    }()
+    
     private var ui: HomeViewUI?
-    public var presenter: HomePresenterProtocol?
     
     override func loadView() {
         ui = HomeViewUI(navigation: self.navigationController!, delegate: self)
@@ -24,7 +28,19 @@ class HomeView: UIViewController {
 
 extension HomeView: HomeViewProtocol{
     
-    func notifyMovieSelected() {
-        presenter?.goToMovieDetail()
+    func notifyOptionSelected(option: Int) {
+        homePager.setCurrentOption(position: option)
+    }
+    
+    func notifyGetCategoriesList() -> [CategoryOption] {
+        return homePager.categories
+    }
+    
+    func notifyGetParentView() -> UIViewController {
+        return self
+    }
+    
+    func notifyGetPagerView() -> UIPageViewController {
+        return homePager
     }
 }
