@@ -68,13 +68,14 @@ class LoginViewUI: UIView {
         return btn
     }()
     
-    private lazy var lbError: UILabel = {
+    public lazy var lbError: UILabel = {
         let lb = UILabel()
         lb.text = "Usuario invalido, algo ocurrio en la base de datos, intentalo más tarde"
         lb.textAlignment = .center
         lb.numberOfLines = 0
         lb.textColor = ColorManager.lightRed
         lb.font = UIFont.boldSystemFont(ofSize: 16)
+        lb.isHidden = true
         lb.translatesAutoresizingMaskIntoConstraints = false
         return lb
     }()
@@ -107,8 +108,8 @@ class LoginViewUI: UIView {
     
     private func buildUIComponents(){
         
-        txtUser.text = "a"
-        txtCredential.text = "b"
+        txtUser.text = "gtd_94@hotmail.com"
+        txtCredential.text = "qwerty"
         
         self.changeBtnLogInStatus(enable: true)
         
@@ -151,6 +152,7 @@ class LoginViewUI: UIView {
     @objc func validateFields(){
         let usr = txtUser.text ?? ""
         let credential = txtCredential.text ?? ""
+        lbError.isHidden = true
         
         if !usr.isEmpty && !credential.isEmpty{
             self.changeBtnLogInStatus(enable: true)
@@ -163,6 +165,7 @@ class LoginViewUI: UIView {
         let usr = txtUser.text ?? ""
         let credential = txtCredential.text ?? ""
         self.hideKeyboard()
+        lbError.isHidden = true
         delegate?.notifyLogIn(usr: usr, credential: credential)
     }
     

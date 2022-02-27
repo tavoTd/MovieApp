@@ -16,12 +16,17 @@ class LoginPresenter{
 extension LoginPresenter: LoginPresenterProtocol{
     
     func requestLogIn(usr: String, credential: String) {
-        router?.navigateToHome()
+        view?.showLoading()
+        interactor?.postLogIn(usr: usr, credential: credential)
     }
     
     func logInSuccessful() {
+        view?.hideLoading()
+        router?.navigateToHome()
     }
     
     func logInFailure(msg: String) {
+        view?.hideLoading()
+        view?.displayErrorLogIn(msg: msg)
     }
 }

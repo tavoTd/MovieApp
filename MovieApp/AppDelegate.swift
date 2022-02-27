@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import LGSideMenuController
 import IQKeyboardManagerSwift
 
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
         
         addObservers()
         setupKeyboard()
@@ -43,7 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     @objc private func notifyLogOut(){
-        self.openLoginModule()
+        do{
+            try Auth.auth().signOut()
+            self.openLoginModule()
+            
+        }catch let errorLogOut as NSError{
+            print("Ocurrio un error: \(errorLogOut)")
+        }
     }
     
     @objc private func notifyOpenHomeModule(){

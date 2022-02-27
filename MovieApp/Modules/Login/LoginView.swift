@@ -26,9 +26,11 @@ class LoginView: UIViewController {
 extension LoginView: LoginViewProtocol{
     
     func showLoading() {
+        LoaderView.show(parent: self.view)
     }
     
     func hideLoading() {
+        LoaderView.dismiss(parent: self.view)
     }
     
     func notifyLogIn(usr: String, credential: String) {
@@ -36,5 +38,7 @@ extension LoginView: LoginViewProtocol{
     }
     
     func displayErrorLogIn(msg: String) {
+        ui?.lbError.isHidden = false
+        ui?.lbError.text = msg
     }
 }

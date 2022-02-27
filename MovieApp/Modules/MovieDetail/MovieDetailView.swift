@@ -9,11 +9,16 @@ import UIKit
 
 class MovieDetailView: UIViewController {
     
+    private var ui: MovieDetailViewUI?
     public var presenter: MovieDetailPresenterProtocol?
+    
+    override func loadView() {
+        ui = MovieDetailViewUI(navigation: self.navigationController!, delegate: self)
+        view = ui
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.green
     }
 }
 

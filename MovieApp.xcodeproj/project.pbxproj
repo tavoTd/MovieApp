@@ -21,6 +21,8 @@
 		AE1A212627C994FD00E91E74 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A212527C994FD00E91E74 /* LoginView.swift */; };
 		AE1A212927C996E300E91E74 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A212827C996E300E91E74 /* ColorManager.swift */; };
 		AE1A212C27C9986D00E91E74 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A212B27C9986D00E91E74 /* UIView+Extension.swift */; };
+		AE48B5F027CB44B90029AB12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE48B5EF27CB44B90029AB12 /* GoogleService-Info.plist */; };
+		AE48B5F227CB50C50029AB12 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48B5F127CB50C50029AB12 /* LoaderView.swift */; };
 		AE49860D27C9E6E600B4FBC6 /* HomeMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49860C27C9E6E600B4FBC6 /* HomeMain.swift */; };
 		AE49860F27C9E71900B4FBC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49860E27C9E71900B4FBC6 /* HomeView.swift */; };
 		AE49861127C9E72900B4FBC6 /* HomeViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49861027C9E72900B4FBC6 /* HomeViewUI.swift */; };
@@ -75,6 +77,8 @@
 		AE1A212527C994FD00E91E74 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AE1A212827C996E300E91E74 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		AE1A212B27C9986D00E91E74 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AE48B5EF27CB44B90029AB12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AE48B5F127CB50C50029AB12 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		AE49860C27C9E6E600B4FBC6 /* HomeMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMain.swift; sourceTree = "<group>"; };
 		AE49860E27C9E71900B4FBC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AE49861027C9E72900B4FBC6 /* HomeViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUI.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			children = (
 				AE1A210E27C9942500E91E74 /* AppDelegate.swift */,
 				AE1A211C27C9942700E91E74 /* Info.plist */,
+				AE48B5EF27CB44B90029AB12 /* GoogleService-Info.plist */,
 				AE1A211927C9942700E91E74 /* LaunchScreen.storyboard */,
 				AE75BF7A27CA7F6B005E7297 /* Core */,
 				AE1A212227C9946900E91E74 /* Modules */,
@@ -236,6 +241,7 @@
 				AE49861D27C9ECCF00B4FBC6 /* NavigationView.swift */,
 				AE75BF7627CA6679005E7297 /* TabView.swift */,
 				AE75BF7827CA77A8005E7297 /* MovieViewCell.swift */,
+				AE48B5F127CB50C50029AB12 /* LoaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 			files = (
 				AE1A211B27C9942700E91E74 /* LaunchScreen.storyboard in Resources */,
 				AE1A211827C9942700E91E74 /* Assets.xcassets in Resources */,
+				AE48B5F027CB44B90029AB12 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +437,7 @@
 				AE07E69F27C9B4F40041A237 /* LoginPresenter.swift in Sources */,
 				AE75BF9B27CB1577005E7297 /* ProfileRouter.swift in Sources */,
 				AE07E6A827C9CA880041A237 /* Bundle+Extension.swift in Sources */,
+				AE48B5F227CB50C50029AB12 /* LoaderView.swift in Sources */,
 				AE75BF9127CB150C005E7297 /* ProfileMain.swift in Sources */,
 				AE75BF9527CB1544005E7297 /* ProfileViewUI.swift in Sources */,
 				AE07E69D27C9B4DE0041A237 /* LoginViewUI.swift in Sources */,

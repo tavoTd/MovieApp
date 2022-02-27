@@ -4,6 +4,8 @@
 target 'MovieApp' do
   
   use_frameworks!
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   pod 'LGSideMenuController'
   pod 'IQKeyboardManagerSwift', '6.5.6'
 
