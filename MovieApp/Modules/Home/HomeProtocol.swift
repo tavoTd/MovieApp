@@ -8,13 +8,16 @@
 import Foundation
 
 protocol HomeViewProtocol: AnyObject{
+    func notifyMovieSelected()
 }
 
 protocol HomePresenterProtocol: AnyObject{
+    func goToMovieDetail()
 }
 
 protocol HomeInteractorProtocol: AnyObject{
 }
 
 protocol HomeRouterProtocol: AnyObject{
+    func navigateToMoviewDetail()
 }

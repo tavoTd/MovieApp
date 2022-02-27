@@ -1,20 +1,13 @@
 //
-//  HomeViewUI.swift
+//  ProfileViewUI.swift
 //  MovieApp
 //
-//  Created by Gustavo Tellez on 25/02/22.
+//  Created by Gustavo Tellez on 26/02/22.
 //
 
 import UIKit
 
-enum CategoryOption: String{
-    case Popular        =   "Popular"
-    case ToRated        =   "To Rated"
-    case OnTV           =   "On TV"
-    case AiringToday    =   "Airing Today"
-}
-
-class HomeViewUI: UIView {
+class ProfileViewUI: UIView {
     
     private lazy var navigationView: NavigationView = {
         let navigation = NavigationView()
@@ -22,15 +15,38 @@ class HomeViewUI: UIView {
         return navigation
     }()
     
-    private lazy var stackView: UIStackView = {
-        let stack = UIStackView()
-        stack.spacing = 0
-        stack.axis = .horizontal
-        stack.distribution = .fillProportionally
-        stack.layer.cornerRadius = 8.0
-        stack.backgroundColor = ColorManager.darkBlue
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
+    public lazy var imgProfile: UIImageView = {
+        let imgView = UIImageView()
+        imgView.contentMode = .scaleAspectFit
+        imgView.clipsToBounds = true
+        imgView.layer.cornerRadius = 30.0
+        imgView.image = UIImage(named: "img_profile", in: Bundle.local, compatibleWith: nil)
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        return imgView
+    }()
+    
+    public lazy var lbNameProfile: UILabel = {
+        let lb = UILabel()
+        lb.text = "@LuisGarcia"
+        lb.textColor = ColorManager.fluorescentGreen
+        lb.font = UIFont.boldSystemFont(ofSize: 20)
+        lb.numberOfLines = 1
+        lb.minimumScaleFactor = 0.6
+        lb.adjustsFontSizeToFitWidth = true
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        return lb
+    }()
+    
+    public lazy var lbTitleSection: UILabel = {
+        let lb = UILabel()
+        lb.text = "Favorite Shows"
+        lb.textColor = ColorManager.fluorescentGreen
+        lb.font = UIFont.boldSystemFont(ofSize: 20)
+        lb.numberOfLines = 1
+        lb.minimumScaleFactor = 0.6
+        lb.adjustsFontSizeToFitWidth = true
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        return lb
     }()
     
     private lazy var movieCollection: UICollectionView = {
@@ -51,17 +67,13 @@ class HomeViewUI: UIView {
                               MovieTest(name: "Zombie 5", score: "9.5"),
                               MovieTest(name: "La noche de los muertos vivientes", score: "10.0")]
 
-    private var categories: [TabView] = []
-    public weak var delegate: HomeViewProtocol?
+    public weak var delegate: ProfileViewProtocol?
     
-    public convenience init(navigation: UINavigationController, delegate: HomeViewProtocol){
+    public convenience init(navigation: UINavigationController, delegate: ProfileViewProtocol){
         self.init()
         self.delegate = delegate
         self.backgroundColor = ColorManager.darkGreen
-        self.navigationView.configComponents(navigation: navigation,
-                                             title: "TV Shows",
-                                             iconLeftButton: nil,
-                                             iconRightButton: "icon_menu")
+        self.navigationView.configComponents(navigation: navigation, title: "Profile")
         
         buildUIComponents()
         buildConstraints()
@@ -76,11 +88,10 @@ class HomeViewUI: UIView {
     }
     
     private func buildUIComponents(){
-        
-        configCategories()
-        
         self.addSubview(navigationView)
-        self.addSubview(stackView)
+        self.addSubview(imgProfile)
+        self.addSubview(lbNameProfile)
+        self.addSubview(lbTitleSection)
         self.addSubview(movieCollection)
     }
     
@@ -90,51 +101,27 @@ class HomeViewUI: UIView {
             navigationView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             navigationView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
-            stackView.topAnchor.constraint(equalTo: navigationView.bottomAnchor, constant: 20.0),
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30.0),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30.0),
+            imgProfile.topAnchor.constraint(equalTo: navigationView.bottomAnchor, constant: 30.0),
+            imgProfile.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30.0),
+            imgProfile.heightAnchor.constraint(equalToConstant: 60.0),
+            imgProfile.widthAnchor.constraint(equalToConstant: 60.0),
             
-            movieCollection.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 30.0),
+            lbNameProfile.centerYAnchor.constraint(equalTo: imgProfile.centerYAnchor),
+            lbNameProfile.leadingAnchor.constraint(equalTo: imgProfile.trailingAnchor,constant: 20.0),
+            lbNameProfile.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30.0),
+            
+            lbTitleSection.topAnchor.constraint(equalTo: imgProfile.bottomAnchor, constant: 50.0),
+            lbTitleSection.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0),
+            
+            movieCollection.topAnchor.constraint(equalTo: lbTitleSection.bottomAnchor, constant: 30.0),
             movieCollection.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0),
             movieCollection.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20.0),
             movieCollection.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
-    
-    private func configCategories(){
-        
-        let categoriesArray : [CategoryOption] = [.Popular, .ToRated, .OnTV, .AiringToday]
-        
-        for (index, category) in categoriesArray.enumerated(){
-            let option = TabView(title: category.rawValue)
-            let tap = UITapGestureRecognizer(target: self, action: #selector(onOptionClicked(_:)))
-            
-            option.addGestureRecognizer(tap)
-            option.tag = index
-            
-            self.categories.append(option)
-            self.stackView.addArrangedSubview(option)
-        }
-        
-        categories[0].setTabStatus(.Selected)
-    }
-    
-    @objc private func onOptionClicked(_ sender: UITapGestureRecognizer) {
-        
-        if let optionSelected = sender.view?.tag{
-            self.deselectOptions()
-            categories[optionSelected].setTabStatus(.Selected)
-        }
-    }
-    
-    private func deselectOptions(){
-        for category in categories{
-            category.setTabStatus(.Deselected)
-        }
-    }
 }
 
-extension HomeViewUI: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension ProfileViewUI: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return moviesTest.count
@@ -168,4 +155,3 @@ extension HomeViewUI: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         delegate?.notifyMovieSelected()
     }
 }
-

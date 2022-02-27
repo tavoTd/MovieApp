@@ -14,4 +14,7 @@ class HomePresenter{
 }
 
 extension HomePresenter: HomePresenterProtocol{
+    func goToMovieDetail() {
+        router?.navigateToMoviewDetail()
+    }
 }

@@ -23,4 +23,8 @@ class HomeView: UIViewController {
 }
 
 extension HomeView: HomeViewProtocol{
+    
+    func notifyMovieSelected() {
+        presenter?.goToMovieDetail()
+    }
 }

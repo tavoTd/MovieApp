@@ -40,6 +40,20 @@
 		AE75BF8927CABD56005E7297 /* SideMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8827CABD56005E7297 /* SideMenuRouter.swift */; };
 		AE75BF8B27CABD79005E7297 /* SideMenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8A27CABD79005E7297 /* SideMenuProtocol.swift */; };
 		AE75BF8E27CAD047005E7297 /* OptionMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF8D27CAD047005E7297 /* OptionMenuViewCell.swift */; };
+		AE75BF9127CB150C005E7297 /* ProfileMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9027CB150C005E7297 /* ProfileMain.swift */; };
+		AE75BF9327CB152A005E7297 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9227CB152A005E7297 /* ProfileView.swift */; };
+		AE75BF9527CB1544005E7297 /* ProfileViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9427CB1544005E7297 /* ProfileViewUI.swift */; };
+		AE75BF9727CB1554005E7297 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9627CB1554005E7297 /* ProfilePresenter.swift */; };
+		AE75BF9927CB1566005E7297 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9827CB1566005E7297 /* ProfileInteractor.swift */; };
+		AE75BF9B27CB1577005E7297 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9A27CB1577005E7297 /* ProfileRouter.swift */; };
+		AE75BF9D27CB158E005E7297 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9C27CB158E005E7297 /* ProfileProtocol.swift */; };
+		AE75BFA027CB17FD005E7297 /* MovieDetailMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BF9F27CB17FD005E7297 /* MovieDetailMain.swift */; };
+		AE75BFA227CB181B005E7297 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BFA127CB181B005E7297 /* MovieDetailView.swift */; };
+		AE75BFA427CB182A005E7297 /* MovieDetailViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BFA327CB182A005E7297 /* MovieDetailViewUI.swift */; };
+		AE75BFA627CB184F005E7297 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BFA527CB184F005E7297 /* MovieDetailPresenter.swift */; };
+		AE75BFA827CB1866005E7297 /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BFA727CB1866005E7297 /* MovieDetailInteractor.swift */; };
+		AE75BFAA27CB1879005E7297 /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BFA927CB1879005E7297 /* MovieDetailRouter.swift */; };
+		AE75BFAC27CB189B005E7297 /* MovieDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75BFAB27CB189B005E7297 /* MovieDetailProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +94,20 @@
 		AE75BF8827CABD56005E7297 /* SideMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRouter.swift; sourceTree = "<group>"; };
 		AE75BF8A27CABD79005E7297 /* SideMenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuProtocol.swift; sourceTree = "<group>"; };
 		AE75BF8D27CAD047005E7297 /* OptionMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMenuViewCell.swift; sourceTree = "<group>"; };
+		AE75BF9027CB150C005E7297 /* ProfileMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMain.swift; sourceTree = "<group>"; };
+		AE75BF9227CB152A005E7297 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AE75BF9427CB1544005E7297 /* ProfileViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewUI.swift; sourceTree = "<group>"; };
+		AE75BF9627CB1554005E7297 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		AE75BF9827CB1566005E7297 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		AE75BF9A27CB1577005E7297 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		AE75BF9C27CB158E005E7297 /* ProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
+		AE75BF9F27CB17FD005E7297 /* MovieDetailMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailMain.swift; sourceTree = "<group>"; };
+		AE75BFA127CB181B005E7297 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		AE75BFA327CB182A005E7297 /* MovieDetailViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewUI.swift; sourceTree = "<group>"; };
+		AE75BFA527CB184F005E7297 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
+		AE75BFA727CB1866005E7297 /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
+		AE75BFA927CB1879005E7297 /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
+		AE75BFAB27CB189B005E7297 /* MovieDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +176,8 @@
 				AE1A212427C994EA00E91E74 /* Login */,
 				AE75BF7D27CABCC7005E7297 /* SideMenu */,
 				AE49860B27C9DE2300B4FBC6 /* Home */,
+				AE75BF9E27CB178D005E7297 /* MovieDetail */,
+				AE75BF8F27CB14F5005E7297 /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -239,6 +269,34 @@
 				AE75BF8D27CAD047005E7297 /* OptionMenuViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		AE75BF8F27CB14F5005E7297 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AE75BF9027CB150C005E7297 /* ProfileMain.swift */,
+				AE75BF9227CB152A005E7297 /* ProfileView.swift */,
+				AE75BF9427CB1544005E7297 /* ProfileViewUI.swift */,
+				AE75BF9627CB1554005E7297 /* ProfilePresenter.swift */,
+				AE75BF9827CB1566005E7297 /* ProfileInteractor.swift */,
+				AE75BF9A27CB1577005E7297 /* ProfileRouter.swift */,
+				AE75BF9C27CB158E005E7297 /* ProfileProtocol.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AE75BF9E27CB178D005E7297 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AE75BF9F27CB17FD005E7297 /* MovieDetailMain.swift */,
+				AE75BFA127CB181B005E7297 /* MovieDetailView.swift */,
+				AE75BFA327CB182A005E7297 /* MovieDetailViewUI.swift */,
+				AE75BFA527CB184F005E7297 /* MovieDetailPresenter.swift */,
+				AE75BFA727CB1866005E7297 /* MovieDetailInteractor.swift */,
+				AE75BFA927CB1879005E7297 /* MovieDetailRouter.swift */,
+				AE75BFAB27CB189B005E7297 /* MovieDetailProtocol.swift */,
+			);
+			path = MovieDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,28 +418,42 @@
 				AE1A212627C994FD00E91E74 /* LoginView.swift in Sources */,
 				AE49861E27C9ECCF00B4FBC6 /* NavigationView.swift in Sources */,
 				AE75BF8E27CAD047005E7297 /* OptionMenuViewCell.swift in Sources */,
+				AE75BFAC27CB189B005E7297 /* MovieDetailProtocol.swift in Sources */,
 				AE75BF8527CABD2A005E7297 /* SideMenuPresenter.swift in Sources */,
+				AE75BFA427CB182A005E7297 /* MovieDetailViewUI.swift in Sources */,
+				AE75BFA627CB184F005E7297 /* MovieDetailPresenter.swift in Sources */,
 				AE49860F27C9E71900B4FBC6 /* HomeView.swift in Sources */,
 				AE49861527C9E75600B4FBC6 /* HomeInteractor.swift in Sources */,
 				AE75BF8327CABD1D005E7297 /* SideMenuViewUI.swift in Sources */,
 				AE49861327C9E73700B4FBC6 /* HomePresenter.swift in Sources */,
+				AE75BF9727CB1554005E7297 /* ProfilePresenter.swift in Sources */,
 				AE07E69F27C9B4F40041A237 /* LoginPresenter.swift in Sources */,
+				AE75BF9B27CB1577005E7297 /* ProfileRouter.swift in Sources */,
 				AE07E6A827C9CA880041A237 /* Bundle+Extension.swift in Sources */,
+				AE75BF9127CB150C005E7297 /* ProfileMain.swift in Sources */,
+				AE75BF9527CB1544005E7297 /* ProfileViewUI.swift in Sources */,
 				AE07E69D27C9B4DE0041A237 /* LoginViewUI.swift in Sources */,
+				AE75BF9D27CB158E005E7297 /* ProfileProtocol.swift in Sources */,
 				AE49861727C9E76A00B4FBC6 /* HomeRouter.swift in Sources */,
 				AE75BF7727CA6679005E7297 /* TabView.swift in Sources */,
 				AE75BF8927CABD56005E7297 /* SideMenuRouter.swift in Sources */,
 				AE75BF8727CABD3F005E7297 /* SideMenuInteractor.swift in Sources */,
 				AE07E6A127C9B50C0041A237 /* LoginInteractor.swift in Sources */,
 				AE49861927C9E78900B4FBC6 /* HomeProtocol.swift in Sources */,
+				AE75BFA027CB17FD005E7297 /* MovieDetailMain.swift in Sources */,
 				AE07E6A327C9B5170041A237 /* LoginRouter.swift in Sources */,
 				AE49860D27C9E6E600B4FBC6 /* HomeMain.swift in Sources */,
 				AE1A212C27C9986D00E91E74 /* UIView+Extension.swift in Sources */,
 				AE07E6A527C9B5250041A237 /* LoginProtocol.swift in Sources */,
+				AE75BF9327CB152A005E7297 /* ProfileView.swift in Sources */,
+				AE75BFA827CB1866005E7297 /* MovieDetailInteractor.swift in Sources */,
+				AE75BF9927CB1566005E7297 /* ProfileInteractor.swift in Sources */,
 				AE75BF8B27CABD79005E7297 /* SideMenuProtocol.swift in Sources */,
 				AE75BF8127CABD04005E7297 /* SideMenuView.swift in Sources */,
+				AE75BFA227CB181B005E7297 /* MovieDetailView.swift in Sources */,
 				AE07E69B27C9B4C80041A237 /* LoginMain.swift in Sources */,
 				AE1A210F27C9942500E91E74 /* AppDelegate.swift in Sources */,
+				AE75BFAA27CB1879005E7297 /* MovieDetailRouter.swift in Sources */,
 				AE49861127C9E72900B4FBC6 /* HomeViewUI.swift in Sources */,
 				AE75BF7F27CABCE3005E7297 /* SideMenuMain.swift in Sources */,
 				AE75BF7927CA77A8005E7297 /* MovieViewCell.swift in Sources */,

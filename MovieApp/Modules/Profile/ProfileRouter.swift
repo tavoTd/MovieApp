@@ -1,17 +1,17 @@
 //
-//  HomeRouter.swift
+//  ProfileRouter.swift
 //  MovieApp
 //
-//  Created by Gustavo Tellez on 25/02/22.
+//  Created by Gustavo Tellez on 26/02/22.
 //
 
 import UIKit
 
-class HomeRouter{
+class ProfileRouter{
     public var navigation: UINavigationController?
 }
 
-extension HomeRouter: HomeRouterProtocol{
+extension ProfileRouter: ProfileRouterProtocol{
     
     func navigateToMoviewDetail() {
         if let nav = navigation{

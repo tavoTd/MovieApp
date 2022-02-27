@@ -12,6 +12,12 @@ class SideMenuRouter{
 }
 
 extension SideMenuRouter: SideMenuRouterProtocol{
+    
     func navigateToProfile() {
+        if let nav = navigation{
+            let view = ProfileMain.createModule(navigation: nav)
+            
+            nav.pushViewController(view, animated: true)
+        }
     }
 }
