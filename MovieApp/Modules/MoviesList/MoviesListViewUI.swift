@@ -20,14 +20,12 @@ class MoviesListViewUI: UIView {
         return collectionView
     }()
     
-    private var moviesTest = [MovieTest(name: "Zombie 1", score: "8.0"),
-                              MovieTest(name: "Zombie 2", score: "8.5"),
-                              MovieTest(name: "Zombie 3", score: "9.0"),
-                              MovieTest(name: "Zombie 4", score: "9.0"),
-                              MovieTest(name: "Zombie 5", score: "9.5"),
-                              MovieTest(name: "La noche de los muertos vivientes", score: "10.0")]
+    public var movies : [Movie] = []{
+        didSet{
+            movieCollection.reloadData()
+        }
+    }
 
-    private var categories: [TabView] = []
     public weak var delegate: MoviesListViewProtocol?
     
     public convenience init(navigation: UINavigationController, delegate: MoviesListViewProtocol){
@@ -64,7 +62,7 @@ class MoviesListViewUI: UIView {
 extension MoviesListViewUI: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moviesTest.count
+        return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -84,7 +82,7 @@ extension MoviesListViewUI: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieViewCell.identifier, for: indexPath) as! MovieViewCell
-        let movie = moviesTest[indexPath.row]
+        let movie = movies[indexPath.row]
         
         cell.setMovieInfo(info: movie)
         
@@ -92,6 +90,7 @@ extension MoviesListViewUI: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.notifyMovieSelected()
+        let movieId = "\(movies[indexPath.row].id)"
+        delegate?.notifyMovieSelected(id: movieId)
     }
 }

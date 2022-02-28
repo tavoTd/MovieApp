@@ -9,7 +9,7 @@ import UIKit
 
 public class MovieDetailMain{
     
-    public static func createModule(navigation: UINavigationController?) -> UIViewController{
+    public static func createModule(navigation: UINavigationController?, movieId: String) -> UIViewController{
         
         let viewController : MovieDetailView? = MovieDetailView()
         
@@ -18,6 +18,7 @@ public class MovieDetailMain{
             let router = MovieDetailRouter()
             let interactor = MovieDetailInteractor()
             
+            view.movieId = movieId
             view.presenter = presenter
             
             presenter.view = view

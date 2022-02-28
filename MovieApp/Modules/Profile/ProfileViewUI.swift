@@ -27,7 +27,7 @@ class ProfileViewUI: UIView {
     
     public lazy var lbNameProfile: UILabel = {
         let lb = UILabel()
-        lb.text = "@LuisGarcia"
+        lb.text = "@gustavoTd"
         lb.textColor = ColorManager.fluorescentGreen
         lb.font = UIFont.boldSystemFont(ofSize: 20)
         lb.numberOfLines = 1
@@ -63,12 +63,40 @@ class ProfileViewUI: UIView {
         return collectionView
     }()
     
-    private var moviesTest = [MovieTest(name: "Zombie 1", score: "8.0"),
-                              MovieTest(name: "Zombie 2", score: "8.5"),
-                              MovieTest(name: "Zombie 3", score: "9.0"),
-                              MovieTest(name: "Zombie 4", score: "9.0"),
-                              MovieTest(name: "Zombie 5", score: "9.5"),
-                              MovieTest(name: "La noche de los muertos vivientes", score: "10.0")]
+    private var movies = [
+        Movie(id: 634649,
+              title: "Spider-Man: No Way Home",
+              originalTitle: "Spider-Man: No Way Home",
+              poster: UIImage.URLimage(url: "https://image.tmdb.org/t/p/w300/osYbtvqjMUhEXgkuFJOsRYVpq6N.jpg"),
+              originalLanguage: "en",
+              description: "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
+              releaseDate: "2021-12-15",
+              score: "8.3"),
+        Movie(id: 634649,
+              title: "Spider-Man: No Way Home",
+              originalTitle: "Spider-Man: No Way Home",
+              poster: UIImage.URLimage(url: "https://image.tmdb.org/t/p/w300/osYbtvqjMUhEXgkuFJOsRYVpq6N.jpg"),
+              originalLanguage: "en",
+              description: "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
+              releaseDate: "2021-12-15",
+              score: "8.3"),
+        Movie(id: 634649,
+              title: "Spider-Man: No Way Home",
+              originalTitle: "Spider-Man: No Way Home",
+              poster: UIImage.URLimage(url: "https://image.tmdb.org/t/p/w300/osYbtvqjMUhEXgkuFJOsRYVpq6N.jpg"),
+              originalLanguage: "en",
+              description: "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
+              releaseDate: "2021-12-15",
+              score: "8.3"),
+        Movie(id: 634649,
+              title: "Spider-Man: No Way Home",
+              originalTitle: "Spider-Man: No Way Home",
+              poster: UIImage.URLimage(url: "https://image.tmdb.org/t/p/w300/osYbtvqjMUhEXgkuFJOsRYVpq6N.jpg"),
+              originalLanguage: "en",
+              description: "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
+              releaseDate: "2021-12-15",
+              score: "8.3")
+    ]
 
     public weak var delegate: ProfileViewProtocol?
     
@@ -127,7 +155,7 @@ class ProfileViewUI: UIView {
 extension ProfileViewUI: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moviesTest.count
+        return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -147,7 +175,7 @@ extension ProfileViewUI: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieViewCell.identifier, for: indexPath) as! MovieViewCell
-        let movie = moviesTest[indexPath.row]
+        let movie = movies[indexPath.row]
         
         cell.setMovieInfo(info: movie)
         
@@ -155,6 +183,7 @@ extension ProfileViewUI: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.notifyMovieSelected()
+        let movieId = "\(movies[indexPath.row].id)"
+        delegate?.notifyMovieSelected(id: movieId)
     }
 }

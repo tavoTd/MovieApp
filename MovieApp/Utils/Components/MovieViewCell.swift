@@ -152,11 +152,12 @@ class MovieViewCell: UICollectionViewCell {
         view.layer.shadowOffset = .zero
     }
     
-    public func setMovieInfo(info: MovieTest){
-        imgMovie.image = UIImage(named: info.img, in: Bundle.local, compatibleWith: nil)
-        lbTitleMovie.text = info.name
+    public func setMovieInfo(info: Movie){
+        
+        imgMovie.image = info.poster
+        lbTitleMovie.text = info.title
         lbDescriptionMovie.text = info.description
-        lbDateMovie.text = info.date
+        lbDateMovie.text = info.releaseDate
         lbScoreMovie.text = info.score
     }
 }

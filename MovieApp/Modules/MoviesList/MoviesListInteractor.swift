@@ -14,7 +14,37 @@ class MoviesListInteractor{
 
 extension MoviesListInteractor: MoviesListInteractorProtocol{
     
-    func fetchMovies() {
+    func fetchPopularMoviesList() {
+        let endpoint = "/popular"
+        let params = ["page" : "1"]
+        
+        moviesListService.request(endpoint: endpoint, params: params) { [weak self] (response, error) in
+            
+            guard let _ = response else {
+                DispatchQueue.main.async {
+                    guard let data = error?.genericError().dataResponse else {
+                        self?.presenter?.failureRequest(error: error?.genericError().message ?? "")
+                        return
+                    }
+                    do{
+                        let json = try DictionaryDeserializer().deserialize(data)
+                        self?.presenter?.failureRequest(error: (json["status_message"] as? String ?? "Intente más tarde"))
+                        
+                    }catch {
+                        self?.presenter?.failureRequest(error: "No se pudo obtener una respuesta valida")
+                        return
+                    }
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.presenter?.responseMoviesList(response: response?.list ?? [])
+            }
+        }
+    }
+    
+    func fetchToRatedMoviesList() {
         let endpoint = "/top_rated"
         let params = ["page" : "1"]
         
@@ -23,15 +53,15 @@ extension MoviesListInteractor: MoviesListInteractorProtocol{
             guard let _ = response else {
                 DispatchQueue.main.async {
                     guard let data = error?.genericError().dataResponse else {
-//                        self?.presenter?.reponseFailureOperationInformation(message: error?.genericError().message ?? "")
+                        self?.presenter?.failureRequest(error: error?.genericError().message ?? "")
                         return
                     }
                     do{
                         let json = try DictionaryDeserializer().deserialize(data)
-//                        self?.presenter?.reponseFailureOperationInformation(message: (json["status_message"] as? String ?? "Intente mas tarde"))
+                        self?.presenter?.failureRequest(error: (json["status_message"] as? String ?? "Intente más tarde"))
                         
                     }catch {
-//                        self?.presenter?.reponseFailureOperationInformation(message: "No se pudo obtener una respuesta valida")
+                        self?.presenter?.failureRequest(error: "No se pudo obtener una respuesta valida")
                         return
                     }
                 }
@@ -39,8 +69,37 @@ extension MoviesListInteractor: MoviesListInteractorProtocol{
             }
             
             DispatchQueue.main.async {
-                print(response)
-//                self?.presenter?.responsePayment(operationResponse: response?.resultado)
+                self?.presenter?.responseMoviesList(response: response?.list ?? [])
+            }
+        }
+    }
+    
+    func fetchNowPlayingMoviesList() {
+        let endpoint = "/now_playing"
+        let params = ["page" : "1"]
+        
+        moviesListService.request(endpoint: endpoint, params: params) { [weak self] (response, error) in
+            
+            guard let _ = response else {
+                DispatchQueue.main.async {
+                    guard let data = error?.genericError().dataResponse else {
+                        self?.presenter?.failureRequest(error: error?.genericError().message ?? "")
+                        return
+                    }
+                    do{
+                        let json = try DictionaryDeserializer().deserialize(data)
+                        self?.presenter?.failureRequest(error: (json["status_message"] as? String ?? "Intente más tarde"))
+                        
+                    }catch {
+                        self?.presenter?.failureRequest(error: "No se pudo obtener una respuesta valida")
+                        return
+                    }
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.presenter?.responseMoviesList(response: response?.list ?? [])
             }
         }
     }

@@ -13,9 +13,9 @@ class MoviesListRouter{
 
 extension MoviesListRouter: MoviesListRouterProtocol{
     
-    func navigateToMoviewDetail() {
+    func navigateToMoviewDetail(id: String) {
         if let nav = navigation{
-            let view = MovieDetailMain.createModule(navigation: nav)
+            let view = MovieDetailMain.createModule(navigation: nav, movieId: id)
             
             nav.pushViewController(view, animated: true)
         }

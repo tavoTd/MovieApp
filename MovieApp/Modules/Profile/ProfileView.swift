@@ -23,7 +23,7 @@ class ProfileView: UIViewController {
 }
 
 extension ProfileView: ProfileViewProtocol{
-    func notifyMovieSelected() {
-        presenter?.goToMovieDetail()
+    func notifyMovieSelected(id: String) {
+        presenter?.goToMovieDetail(id: id)
     }
 }

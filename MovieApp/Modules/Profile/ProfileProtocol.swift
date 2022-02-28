@@ -8,16 +8,16 @@
 import Foundation
 
 protocol ProfileViewProtocol: AnyObject{
-    func notifyMovieSelected()
+    func notifyMovieSelected(id: String)
 }
 
 protocol ProfilePresenterProtocol: AnyObject{
-    func goToMovieDetail()
+    func goToMovieDetail(id: String)
 }
 
 protocol ProfileInteractorProtocol: AnyObject{
 }
 
 protocol ProfileRouterProtocol: AnyObject{
-    func navigateToMoviewDetail()
+    func navigateToMoviewDetail(id: String)
 }

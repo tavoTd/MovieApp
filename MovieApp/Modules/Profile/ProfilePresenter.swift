@@ -14,7 +14,7 @@ class ProfilePresenter{
 }
 
 extension ProfilePresenter: ProfilePresenterProtocol{
-    func goToMovieDetail() {
-        router?.navigateToMoviewDetail()
+    func goToMovieDetail(id: String) {
+        router?.navigateToMoviewDetail(id: id)
     }
 }
