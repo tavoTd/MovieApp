@@ -29,8 +29,8 @@ class LoginViewUI: UIView {
     private lazy var txtUser: UITextField = {
         let textfield = UITextField()
         textfield.placeholder = "Username"
-//        textfield.returnKeyType = .done
         textfield.autocorrectionType = .no
+        textfield.autocapitalizationType = .none
         textfield.keyboardType = .asciiCapable
         textfield.layer.cornerRadius = 8.0
         textfield.backgroundColor = UIColor.white
@@ -45,8 +45,9 @@ class LoginViewUI: UIView {
     private lazy var txtCredential: UITextField = {
         let textfield = UITextField()
         textfield.placeholder = "Password"
-//        textfield.returnKeyType = .done
         textfield.autocorrectionType = .no
+        textfield.isSecureTextEntry = true
+        textfield.autocapitalizationType = .none
         textfield.keyboardType = .asciiCapable
         textfield.layer.cornerRadius = 8.0
         textfield.backgroundColor = UIColor.white
@@ -107,9 +108,6 @@ class LoginViewUI: UIView {
     }
     
     private func buildUIComponents(){
-        
-        txtUser.text = "gtd_94@hotmail.com"
-        txtCredential.text = "qwerty"
         
         self.changeBtnLogInStatus(enable: true)
         
