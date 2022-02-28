@@ -32,6 +32,8 @@
 		AE180CC727CC313600D345AF /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE180CC627CC313600D345AF /* MovieDetailResponse.swift */; };
 		AE180CC927CC337E00D345AF /* MovieDetailWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE180CC827CC337E00D345AF /* MovieDetailWebService.swift */; };
 		AE180CCB27CC364E00D345AF /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE180CCA27CC364E00D345AF /* MovieDetail.swift */; };
+		AE180CCD27CC532500D345AF /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE180CCC27CC532500D345AF /* VideoResponse.swift */; };
+		AE180CD027CC55CC00D345AF /* VideoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE180CCF27CC55CC00D345AF /* VideoWebService.swift */; };
 		AE1A210F27C9942500E91E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A210E27C9942500E91E74 /* AppDelegate.swift */; };
 		AE1A211827C9942700E91E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1A211727C9942700E91E74 /* Assets.xcassets */; };
 		AE1A211B27C9942700E91E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1A211927C9942700E91E74 /* LaunchScreen.storyboard */; };
@@ -103,6 +105,8 @@
 		AE180CC627CC313600D345AF /* MovieDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResponse.swift; sourceTree = "<group>"; };
 		AE180CC827CC337E00D345AF /* MovieDetailWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailWebService.swift; sourceTree = "<group>"; };
 		AE180CCA27CC364E00D345AF /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		AE180CCC27CC532500D345AF /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
+		AE180CCF27CC55CC00D345AF /* VideoWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWebService.swift; sourceTree = "<group>"; };
 		AE1A210B27C9942500E91E74 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1A210E27C9942500E91E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE1A211727C9942700E91E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,6 +227,15 @@
 			path = MovieDetail;
 			sourceTree = "<group>";
 		};
+		AE180CCE27CC55A900D345AF /* Trailer */ = {
+			isa = PBXGroup;
+			children = (
+				AE180CCF27CC55CC00D345AF /* VideoWebService.swift */,
+				AE180CCC27CC532500D345AF /* VideoResponse.swift */,
+			);
+			path = Trailer;
+			sourceTree = "<group>";
+		};
 		AE1A210227C9942500E91E74 = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,7 @@
 			children = (
 				AE180CB127CBFED200D345AF /* MoviesList */,
 				AE180CC527CC311B00D345AF /* MovieDetail */,
+				AE180CCE27CC55A900D345AF /* Trailer */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -525,6 +539,7 @@
 				AE180CBC27CC0AB700D345AF /* MoviesListViewUI.swift in Sources */,
 				AE75BF9727CB1554005E7297 /* ProfilePresenter.swift in Sources */,
 				AE180CB527CC01C600D345AF /* MoviesListWebService.swift in Sources */,
+				AE180CD027CC55CC00D345AF /* VideoWebService.swift in Sources */,
 				AE07E69F27C9B4F40041A237 /* LoginPresenter.swift in Sources */,
 				AE75BF9B27CB1577005E7297 /* ProfileRouter.swift in Sources */,
 				AE07E6A827C9CA880041A237 /* Bundle+Extension.swift in Sources */,
@@ -555,6 +570,7 @@
 				AE75BF8127CABD04005E7297 /* SideMenuView.swift in Sources */,
 				AE180CC227CC1D4E00D345AF /* UIImage+Extension.swift in Sources */,
 				AE75BFA227CB181B005E7297 /* MovieDetailView.swift in Sources */,
+				AE180CCD27CC532500D345AF /* VideoResponse.swift in Sources */,
 				AE07E69B27C9B4C80041A237 /* LoginMain.swift in Sources */,
 				AE180CAA27CBDEEE00D345AF /* URL+Extension.swift in Sources */,
 				AE180CB027CBEC7400D345AF /* Deserializer.swift in Sources */,

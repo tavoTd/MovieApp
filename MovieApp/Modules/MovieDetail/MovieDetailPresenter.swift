@@ -11,6 +11,8 @@ class MovieDetailPresenter{
     public weak var view    :   MovieDetailViewProtocol?
     public var router       :   MovieDetailRouterProtocol?
     public var interactor   :   MovieDetailInteractorProtocol?
+    
+    private var movieDetail : MovieDetail?
 }
 
 extension MovieDetailPresenter: MovieDetailPresenterProtocol{
@@ -56,8 +58,22 @@ extension MovieDetailPresenter: MovieDetailPresenterProtocol{
                                       popularity: data.popularity
         )
         
+        self.movieDetail = movieDetail
+        
+    }
+    
+    func responseVideoRequest(response: VideoResponse?) {
         view?.dismissLoading()
-        view?.displayMoviesDetail(data: movieDetail)
+        
+        if var data = movieDetail{
+            
+            if let videoArray = response?.list, videoArray.count > 0{
+                let videoKey = videoArray[0].key
+                data.trailerId = videoKey
+            }
+            
+            view?.displayMoviesDetail(data: data)
+        }
     }
     
     func failureRequest(error: String) {

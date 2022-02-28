@@ -19,6 +19,7 @@ protocol MovieDetailPresenterProtocol: AnyObject{
     func requestMovieDetail(id: String)
     
     func responseMoviesDetail(response: MovieDetailResponse?)
+    func responseVideoRequest(response: VideoResponse?)
     func failureRequest(error: String)
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YoutubeKit
 
 class MovieDetailViewUI: UIView {
     
@@ -87,6 +88,17 @@ class MovieDetailViewUI: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         return lb
     }()
+    
+    private lazy var trailerContainer: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        view.isHidden = true
+        view.alpha = 0.0
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private var player: YTSwiftyPlayer!
 
     public weak var delegate: MovieDetailViewProtocol?
     
@@ -123,6 +135,7 @@ class MovieDetailViewUI: UIView {
         
         stackView.addArrangedSubview(headerContainer)
         stackView.addArrangedSubview(descriptionContainer)
+        stackView.addArrangedSubview(trailerContainer)
         
         containerView.addSubview(stackView)
         contentScroll.addSubview(containerView)
@@ -172,7 +185,7 @@ class MovieDetailViewUI: UIView {
             lbDescription.topAnchor.constraint(equalTo: lbDescriptionTitle.bottomAnchor),
             lbDescription.leadingAnchor.constraint(equalTo: descriptionContainer.leadingAnchor, constant: 20.0),
             lbDescription.trailingAnchor.constraint(equalTo: descriptionContainer.trailingAnchor, constant: -20.0),
-            lbDescription.bottomAnchor.constraint(equalTo: descriptionContainer.bottomAnchor),
+            lbDescription.bottomAnchor.constraint(equalTo: descriptionContainer.bottomAnchor)
         ])
     }
     
@@ -192,11 +205,15 @@ class MovieDetailViewUI: UIView {
         
         let heightDescription = lbDescription.intrinsicContentSize.height
         lbDescription.heightAnchor.constraint(equalToConstant: heightDescription).isActive = true
+        
+        if let idVideo = data.trailerId{
+            self.addTrailerView(idTrailer: idVideo)
+        }
     }
     
     private func addInfoToStack(data: MovieDetail){
         
-        for (i, x) in [["Título:", data.title ?? ""],
+        for (_, x) in [["Título:", data.title ?? ""],
                       ["Fecha de estreno:", data.releaseDate ?? ""],
                       ["Idioma original:", data.originalLanguage ?? ""],
                       ["Puntuación:", "\(data.popularity ?? 0.0)"],
@@ -240,6 +257,31 @@ class MovieDetailViewUI: UIView {
             
             if  x.last != "" {
                 headerStack.addArrangedSubview(view)
+            }
+        }
+    }
+    
+    func addTrailerView(idTrailer: String){
+        trailerContainer.isHidden = false
+        player = YTSwiftyPlayer(frame: CGRect.zero, playerVars: [.videoID(idTrailer)])
+        player.translatesAutoresizingMaskIntoConstraints = false
+        
+        trailerContainer.addSubview(player)
+        
+        NSLayoutConstraint.activate([
+            player.topAnchor.constraint(equalTo: trailerContainer.topAnchor, constant: 20.0),
+            player.leadingAnchor.constraint(equalTo: trailerContainer.leadingAnchor, constant: 20.0),
+            player.heightAnchor.constraint(equalToConstant: 250.0),
+            player.trailingAnchor.constraint(equalTo: trailerContainer.trailingAnchor, constant: -20.0),
+            player.bottomAnchor.constraint(equalTo: trailerContainer.bottomAnchor, constant: -30.0),
+        ])
+        
+        player.autoplay = false
+        player.loadPlayer()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            UIView.animate(withDuration: 0.3) {
+                self.trailerContainer.alpha = 1.0
             }
         }
     }

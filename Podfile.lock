@@ -432,12 +432,14 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - YoutubeKit (0.5.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - IQKeyboardManagerSwift (= 6.5.6)
   - LGSideMenuController
+  - YoutubeKit
 
 SPEC REPOS:
   trunk:
@@ -458,6 +460,7 @@ SPEC REPOS:
     - LGSideMenuController
     - nanopb
     - PromisesObjC
+    - YoutubeKit
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -477,7 +480,8 @@ SPEC CHECKSUMS:
   LGSideMenuController: 0c7b155b0dbdf14bf8b88d5ac363c5fe1584bb23
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  YoutubeKit: 9f66eba839211158f2aac7ad3833593bd56fa8f9
 
-PODFILE CHECKSUM: 57f95552ae866514437078bcbb3eec65d64d9fe8
+PODFILE CHECKSUM: ed7ffa5efdde60c2f8392560be50a19d6d0cd324
 
 COCOAPODS: 1.11.2

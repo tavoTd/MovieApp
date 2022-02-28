@@ -18,6 +18,7 @@ struct MovieDetail{
     var genders             :   String?
     var companies           :   [Companies]?
     var popularity          :   Float?
+    var trailerId           :   String? = nil
 }
 
 struct Companies{

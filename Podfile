@@ -7,6 +7,7 @@ target 'MovieApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'LGSideMenuController'
+  pod 'YoutubeKit'
   pod 'IQKeyboardManagerSwift', '6.5.6'
 
 end
